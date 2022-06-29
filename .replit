@@ -1,2 +1,3 @@
-language = "undefined"
-run = ""
+language = "python3"
+run = "python test.py"
+# run = "python main.py"
