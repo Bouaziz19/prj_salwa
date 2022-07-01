@@ -7,14 +7,15 @@ class Tache:
         self.pt = pt
         self.cj = 0
 
+
+
+
 class Cromosome:
   def __init__(self):
     self.tabcj=[]
     self.n_tch = inp.n_tch
     self.lstch =[]
     self.fo=0
-    # self.minof=0
-    
   
     
     self.get_new_tache()
@@ -50,7 +51,6 @@ class Population_Init:
     self.n_crom=inp.n_crom
     self.tab_crom=[]
     self.get_new_coromosome()
-    # self.solution()
     
 
   def get_new_coromosome(self):
@@ -58,40 +58,24 @@ class Population_Init:
     for ind_crom in range (inp.n_crom):
       random.shuffle(crom.lstch)
       crom.update()
-      print("*********")
-      # st="t-num:"
-      # st1=" cj  :"
+      print('*********')
+  
+      st="t-num:"
+      st1=" cj  :"
       st2=""
       for t in crom.lstch:
-        # st+=str(t.num) +" | "
-        # st1+=str(t.cj)+" | "
+        st+=str(t.num) +" | "
+        st1+=str(t.cj)+" | "
         st2+=" tnum - "+str(t.num) +" - cj : "+str(t.cj)+" || "
       # print(st)
       # print(st1)
       print(st2)
-      print(crom.tabcj)
+      
+      # print(crom.tabcj)
       print(crom.fo)
-      self.tab_crom.append(crom.lstch)
-    print(self.tab_crom)
-    
-    # sorted(self.tab_crom,key=crom.fo)
-    
+      # self.tab_crom.append(crom)
       
-
-    
-    
       
-    # if ind_crom==0:
-    #   self.minfo=crom.fo[ind_crom]
-    # else:
-    #   if crom.fo[ind_crom]< self.minfo:
-    #     self.minfo=crom.fo[ind_crom]
-    #   else:
-    #     self.minfo=self.minfo
-      
-    # print(self.minfo)
-    
-        
   
 
 def test():
